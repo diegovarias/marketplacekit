@@ -1,9 +1,14 @@
 <?php
 
-Route::group(['as' => 'payments.', 'prefix' => 'payments', 'middleware' => ['web', 'auth'], 'namespace' => '\Payments'], function()
-{
-/*
-    Route::get('offline/connect/{key}', 'OfflineController@connect')->name('offline.connect');
+Route::group(
+    [
+    'as' => 'payments.',
+    'prefix' => 'payments',
+    'middleware' => ['web', 'auth'],
+    'namespace' => '\Payments'
+    ],
+    function () {
+    /* Route::get('offline/connect/{key}', 'OfflineController@connect')->name('offline.connect');
     Route::get('offline/{checkout_session}', 'OfflineController@index')->name('offline.index');
     Route::post('offline/{checkout_session}', 'OfflineController@store')->name('offline.store');
 
@@ -14,7 +19,6 @@ Route::group(['as' => 'payments.', 'prefix' => 'payments', 'middleware' => ['web
     Route::get('paypal-split/{checkout_session}', 'PaypalSplitController@index')->name('paypal-split.index');
     #Route::get('checkout/{listing}', 'CheckoutController@index')->name('checkout');
 
-
     #Route::get('stripe/{checkout_session}', 'StripeController@index')->name('stripe.index');
     #Route::post('stripe/{checkout_session}', 'StripeController@store')->name('stripe.store');
 
@@ -24,11 +28,10 @@ Route::group(['as' => 'payments.', 'prefix' => 'payments', 'middleware' => ['web
     Route::get('external/{checkout_session}/{key}/callback', 'ExternalController@callback')->name('external.callback');
     Route::post('external/{checkout_session}/{key}', 'ExternalController@store')->name('external.store');
 
-
-	Route::get('paypal-express/connect', 'PaypalExpressController@connect')->name('paypal-express.connect');
+    Route::get('paypal-express/connect', 'PaypalExpressController@connect')->name('paypal-express.connect');
     Route::any('paypal-express/connected', 'PaypalExpressController@connected')->name('paypal-express.connected');
     Route::any('paypal-express/cancel', 'PaypalExpressController@cancel')->name('paypal-express.cancel');
     Route::any('paypal-express/callback', 'PaypalExpressController@callback')->name('paypal-express.callback');
-    Route::get('paypal-express/{checkout_session}', 'PaypalExpressController@index')->name('paypal-express.index');
-*/
-});
+    Route::get('paypal-express/{checkout_session}', 'PaypalExpressController@index')->name('paypal-express.index'); */
+    }
+);
